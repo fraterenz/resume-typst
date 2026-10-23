@@ -10,7 +10,7 @@
   phone: "",
   personal-site: "",
   orcid: "",
-  accent-color: "#000000",
+  accent-color: "#26428b",
   font: "New Computer Modern",
   paper: "us-letter",
   author-font-size: 20pt,
@@ -32,9 +32,9 @@
     ligatures: false
   )
 
-  // Reccomended to have 0.5in margin on all sides
+  // Wider margins on all sides.
   set page(
-    margin: (0.5in),
+    margin: 0.8in,
     paper: paper,
   )
 
@@ -45,7 +45,7 @@
   // Small caps for section titles
   show heading.where(level: 2): it => [
     #pad(top: 0pt, bottom: -10pt, [#smallcaps(it.body)])
-    #line(length: 100%, stroke: 1pt)
+    #line(length: 100%, stroke: 1pt + rgb(accent-color))
   ]
 
   // Accent Color Styling
